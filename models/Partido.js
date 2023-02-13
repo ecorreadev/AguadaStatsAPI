@@ -66,8 +66,7 @@ const PartidoSchema = mongoose.Schema({
         totalPerdidas: { type: Number, required: true },
         totalRobos: { type: Number, required: true },
         totalFouls: { type: Number, required: true },
-        totalFoulsRec: { type: Number, required: true },
-        totalValor: { type: Number, required: true }
+        totalFoulsRec: { type: Number, required: true }
     }],
     visitanteStats: [
         [{
@@ -120,8 +119,7 @@ const PartidoSchema = mongoose.Schema({
         totalPerdidas: { type: Number, required: true },
         totalRobos: { type: Number, required: true },
         totalFouls: { type: Number, required: true },
-        totalFoulsRec: { type: Number, required: true },
-        totalValor: { type: Number, required: true }
+        totalFoulsRec: { type: Number, required: true }
     }],
     dateAdded: { default: Date.now }
 });
