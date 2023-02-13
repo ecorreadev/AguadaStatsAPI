@@ -16,8 +16,22 @@ router.get('/', async (req, res) => {
 // SUBMIT A POST
 router.post('/', async (req, res) => {
     const partido = new Partido({
-        title: req.body.title,
-        description: req.body.description
+        liga: req.body.liga,
+        fechaLiga: req.body.fechaLiga,
+        fecha: req.body.fecha,
+        jueces: req.body.jueces,
+        cancha: req.body.cancha,
+        local: req.body.local,
+        resultado: req.body.resultado,
+        ganado: req.body.ganado,
+        alargue: req.body.alargue,
+        cantidadAlargues: req.body.cantidadAlargues,
+        localStats: req.body.localStats,
+        totalLocalStats: req.body.totalLocalStats,
+        dtLocal: req.body.dtLocal,
+        visitanteStats: req.body.visitanteStats,
+        totalVisitanteStats: req.body.totalVisitanteStats,
+        dtVisitante: req.body.dtVisitante
     });
     try {
         const savedPartido = await partido.save();

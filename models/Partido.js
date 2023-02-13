@@ -4,11 +4,11 @@ const PartidoSchema = mongoose.Schema({
     liga: { type: String, required: true },
     fechaLiga: { type: Number, required: true },
     fecha: { type: Date, required: true },
-    jueces: [{
+    jueces: {
         juez1: { type: String, required: true },
         juez2: { type: String, required: true },
         juez3: { type: String, required: true }
-    }],
+    },
     cancha: { type: String, required: true },
     local: { type: Boolean, required: true},
     resultado: { type: String, required: true },
@@ -16,7 +16,7 @@ const PartidoSchema = mongoose.Schema({
     alargue: { type: Boolean, required: true },
     cantidadAlargues: { type: Number, required: true },
     localStats: [
-        [{
+        {
             numero: { type: String, required: true },
             jugador: { type: String, required: true },
             minutos: { type: String, required: true },
@@ -41,12 +41,9 @@ const PartidoSchema = mongoose.Schema({
             foulsRec: { type: Number, required: true },
             valor: { type: Number, required: true },
             masMenos: { type: Number }
-        }],
-        [{
-            dt: { type: String, required: true }
-        }]
+        }
     ],
-    totalLocalStats: [{
+    totalLocalStats: {
         totalMinutos: { type: Number, required: true },
         totalPuntos: { type: Number, required: true },
         totalTriplesHechos: { type: Number, required: true },
@@ -67,9 +64,10 @@ const PartidoSchema = mongoose.Schema({
         totalRobos: { type: Number, required: true },
         totalFouls: { type: Number, required: true },
         totalFoulsRec: { type: Number, required: true }
-    }],
+    },
+    dtLocal: { type: String, required: true },
     visitanteStats: [
-        [{
+        {
             numero: { type: String, required: true },
             jugador: { type: String, required: true },
             minutos: { type: String, required: true },
@@ -94,12 +92,9 @@ const PartidoSchema = mongoose.Schema({
             foulsRec: { type: Number, required: true },
             valor: { type: Number, required: true },
             masMenos: { type: Number }
-        }],
-        [{
-            dt: { type: String, required: true }
-        }]
+        }
     ],
-    totalvisitanteStats: [{
+    totalVisitanteStats: {
         totalMinutos: { type: Number, required: true },
         totalPuntos: { type: Number, required: true },
         totalTriplesHechos: { type: Number, required: true },
@@ -120,8 +115,9 @@ const PartidoSchema = mongoose.Schema({
         totalRobos: { type: Number, required: true },
         totalFouls: { type: Number, required: true },
         totalFoulsRec: { type: Number, required: true }
-    }],
-    dateAdded: { default: Date.now }
+    },
+    dtVisitante: { type: String, required: true },
+    dateAdded: { type: Date, default: Date.now }
 });
 
 module.exports = mongoose.model('Partido', PartidoSchema);
