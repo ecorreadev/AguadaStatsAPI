@@ -18,7 +18,7 @@ router.post('/', async (req, res) => {
     const partido = new Partido({
         liga: req.body.liga,
         fechaLiga: req.body.fechaLiga,
-        fecha: req.body.fecha,
+        fecha: new Date(req.body.fecha),
         jueces: req.body.jueces,
         cancha: req.body.cancha,
         local: req.body.local,
