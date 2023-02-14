@@ -26,12 +26,12 @@ router.post('/', async (req, res) => {
         ganado: req.body.ganado,
         alargue: req.body.alargue,
         cantidadAlargues: req.body.cantidadAlargues,
-        localStats: req.body.localStats,
-        totalLocalStats: req.body.totalLocalStats,
-        dtLocal: req.body.dtLocal,
-        visitanteStats: req.body.visitanteStats,
-        totalVisitanteStats: req.body.totalVisitanteStats,
-        dtVisitante: req.body.dtVisitante
+        aguadaStats: req.body.aguadaStats,
+        totalAguadaStats: req.body.totalAguadaStats,
+        dtAguada: req.body.dtAguada,
+        adversarioStats: req.body.adversarioStats,
+        totalAdversarioStats: req.body.totalAdversarioStats,
+        dtAdversario: req.body.dtAdversario
     });
     try {
         const savedPartido = await partido.save();
