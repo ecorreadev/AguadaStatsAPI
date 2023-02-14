@@ -15,7 +15,7 @@ const PartidoSchema = mongoose.Schema({
     ganado: { type: Boolean, required: true },
     alargue: { type: Boolean, required: true },
     cantidadAlargues: { type: Number, required: true },
-    aguadaStats: [
+    localStats: [
         {
             numero: { type: String, required: true },
             jugador: { type: String, required: true },
@@ -43,7 +43,7 @@ const PartidoSchema = mongoose.Schema({
             masMenos: { type: Number }
         }
     ],
-    totalAguadaStats: {
+    totalLocalStats: {
         totalMinutos: { type: Number, required: true },
         totalPuntos: { type: Number, required: true },
         totalTriplesHechos: { type: Number, required: true },
@@ -65,8 +65,8 @@ const PartidoSchema = mongoose.Schema({
         totalFouls: { type: Number, required: true },
         totalFoulsRec: { type: Number, required: true }
     },
-    dtAguada: { type: String, required: true },
-    adversarioStats: [
+    dtLocal: { type: String, required: true },
+    visitanteStats: [
         {
             numero: { type: String, required: true },
             jugador: { type: String, required: true },
@@ -94,7 +94,7 @@ const PartidoSchema = mongoose.Schema({
             masMenos: { type: Number }
         }
     ],
-    totalAdversarioStats: {
+    totalVisitanteStats: {
         totalMinutos: { type: Number, required: true },
         totalPuntos: { type: Number, required: true },
         totalTriplesHechos: { type: Number, required: true },
@@ -116,7 +116,7 @@ const PartidoSchema = mongoose.Schema({
         totalFouls: { type: Number, required: true },
         totalFoulsRec: { type: Number, required: true }
     },
-    dtAdversario: { type: String, required: true },
+    dtVisitante: { type: String, required: true },
     dateAdded: { type: Date, default: Date.now }
 });
 
