@@ -17,8 +17,11 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     const partido = new Partido({
         liga: req.body.liga,
+        temporadaRegular: req.body.temporadaRegular,
+        playoffs: req.body.playoffs,
         fechaLiga: req.body.fechaLiga,
         fecha: new Date(req.body.fecha),
+        adversario: req.body.adversario,
         jueces: req.body.jueces,
         cancha: req.body.cancha,
         local: req.body.local,
@@ -26,6 +29,7 @@ router.post('/', async (req, res) => {
         ganado: req.body.ganado,
         alargue: req.body.alargue,
         cantidadAlargues: req.body.cantidadAlargues,
+        alargues: req.body.alargues,
         aguadaStats: req.body.aguadaStats,
         totalAguadaStats: req.body.totalAguadaStats,
         dtAguada: req.body.dtAguada,

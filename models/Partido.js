@@ -2,8 +2,11 @@ const mongoose = require('mongoose');
 
 const PartidoSchema = mongoose.Schema({
     liga: { type: String },
+    temporadaRegular: { type: Boolean },
+    playoffs: { type: Boolean },
     fechaLiga: { type: Number },
     fecha: { type: Date },
+    adversario: { type: String },
     jueces: [],
     cancha: { type: String },
     local: { type: Boolean},
@@ -11,6 +14,7 @@ const PartidoSchema = mongoose.Schema({
     ganado: { type: Boolean },
     alargue: { type: Boolean },
     cantidadAlargues: { type: Number },
+    alargues: [],
     aguadaStats: [],
     totalAguadaStats: {},
     dtAguada: { type: String },
