@@ -1,9 +1,11 @@
 const mongoose = require('mongoose');
 
 const PartidoSchema = mongoose.Schema({
+    torneo: { type: String, required: true },
     liga: { type: String, required: true },
     temporadaRegular: { type: Boolean, required: true },
     playoffs: { type: Boolean, required: true },
+    superLiga: { type: Boolean },
     fechaLiga: { type: Number, required: true },
     fecha: { type: Date, required: true },
     adversario: { type: String, required: true },

@@ -16,9 +16,11 @@ router.get('/', async (req, res) => {
 // SUBMIT A POST
 router.post('/', async (req, res) => {
     const partido = new Partido({
+        torneo: req.body.torneo,
         liga: req.body.liga,
         temporadaRegular: req.body.temporadaRegular,
         playoffs: req.body.playoffs,
+        superLiga: req.body.playoffs,
         fechaLiga: req.body.fechaLiga,
         fecha: new Date(req.body.fecha),
         adversario: req.body.adversario,
