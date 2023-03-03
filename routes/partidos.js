@@ -20,6 +20,7 @@ router.post('/', async (req, res) => {
         liga: req.body.liga,
         temporadaRegular: req.body.temporadaRegular,
         playoffs: req.body.playoffs,
+        playoffsEtapa: req.body.playoffsEtapa,
         superLiga: req.body.superLiga,
         fechaLiga: req.body.fechaLiga,
         fecha: new Date(req.body.fecha),

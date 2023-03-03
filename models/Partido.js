@@ -5,6 +5,7 @@ const PartidoSchema = mongoose.Schema({
     liga: { type: String, required: true },
     temporadaRegular: { type: Boolean, required: true },
     playoffs: { type: Boolean, required: true },
+    playoffsEtapa: { type: String },
     superLiga: { type: Boolean },
     fechaLiga: { type: Number, required: true },
     fecha: { type: Date, required: true },
