@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js",
-    "heroku-postbuild": "npm run start"
+    "start": "nodemon app.js"
   },
   "author": "Emiliano Correa",
   "license": "ISC",
