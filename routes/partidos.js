@@ -3,7 +3,7 @@ const router = express.Router();
 const Partido = require('../models/Partido');
 
 
-// GET ALL THE POSTS
+// GET TODOS LOS PARTIDOS
 router.get('/', async (req, res) => {
     try {
         const partidos = await Partido.find();
@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-// SUBMIT A POST
+// SUBMIT UN PARTIDO
 router.post('/', async (req, res) => {
     const partido = new Partido({
         torneo: req.body.torneo,
@@ -48,7 +48,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-// GETS A SPECIFIC POST
+// GET UN PARTIDO ESPECIFICO
 router.get('/:partidoId', async (req, res) => {
     try {
         const partido = await Partido.findById(req.params.partidoId);
@@ -58,7 +58,7 @@ router.get('/:partidoId', async (req, res) => {
     }
 });
 
-// DELETE POST
+// DELETE PARTIDO
 router.delete('/:partidoId', async (req, res) => {
     try {
         const removedPartido = await Partido.remove({ _id: req.params.partidoId });
@@ -68,7 +68,7 @@ router.delete('/:partidoId', async (req, res) => {
     }
 });
 
-// UPDATE POST
+// UPDATE PARTIDO
 router.patch('/:partidoId', async (req, res) => {
     try {
         const updatedPartido = await Partido.updateOne({ _id: req.params.partidoId }, { $set: { title: req.body.title } } );
