@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 // Import routes
 const partidosRoute = require('./routes/partidos');
-const busquedaRoute = require('./routes/busqueda');
+const busquedaRoute = require('./routes/adversario');
 
 // Routes
 app.use('/partidos', partidosRoute);

@@ -7,7 +7,6 @@ router.get('/:adversario', async (req, res) => {
     try {
         const partido = await Partido.find({ adversario: req.params.adversario });
         res.json(partido);
-        // console.log(user[0].cancha);
     } catch (err) {
         res.json({ message: err });
     }
