@@ -14,9 +14,11 @@ app.use(bodyParser.json());
 
 // Import routes
 const partidosRoute = require('./routes/partidos');
+const torneoRoute = require('./routes/torneo');
 
 // Routes
 app.use('/partidos', partidosRoute);
+app.use('/torneo', torneoRoute);
 
 app.get('/', (req, res) => {
     res.send('Welcome');
@@ -29,12 +31,3 @@ mongoose.connect(process.env.DB_CONNECTION, () => {
 
 app.listen(3000);
 
-
-
-// PARA EL FRONTEND
-// fetch('http://localhost:3000/partidos').then(result => {
-//     return result.json();
-// })
-// .then(data => {
-//     console.log(data);
-// })
