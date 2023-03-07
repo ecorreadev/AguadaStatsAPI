@@ -14,9 +14,11 @@ app.use(bodyParser.json());
 
 // Import routes
 const partidosRoute = require('./routes/partidos');
+const busquedaRoute = require('./routes/busqueda');
 
 // Routes
 app.use('/partidos', partidosRoute);
+app.use('/busqueda', busquedaRoute);
 
 app.get('/', (req, res) => {
     res.send('Welcome');
