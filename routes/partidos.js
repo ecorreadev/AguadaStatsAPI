@@ -2,12 +2,21 @@ const express = require('express');
 const router = express.Router();
 const Partido = require('../models/Partido');
 
-
 // GET TODOS LOS PARTIDOS
 router.get('/', async (req, res) => {
     try {
         const partidos = await Partido.find();
         res.json(partidos);
+    } catch (err) {
+        res.json({ message: err });
+    }
+});
+
+// GET UN PARTIDO ESPECIFICO
+router.get('/:partidoId', async (req, res) => {
+    try {
+        const partido = await Partido.findById(req.params.partidoId);
+        res.json(partido);
     } catch (err) {
         res.json({ message: err });
     }
@@ -43,16 +52,6 @@ router.post('/', async (req, res) => {
     try {
         const savedPartido = await partido.save();
         res.json(savedPartido);
-    } catch (err) {
-        res.json({ message: err });
-    }
-});
-
-// GET UN PARTIDO ESPECIFICO
-router.get('/:partidoId', async (req, res) => {
-    try {
-        const partido = await Partido.findById(req.params.partidoId);
-        res.json(partido);
     } catch (err) {
         res.json({ message: err });
     }
