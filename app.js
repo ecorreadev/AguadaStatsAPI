@@ -20,6 +20,7 @@ const ligaRout = require('./routes/liga');
 const etapaPlayoffsRout = require('./routes/etapaPlayoffs');
 const canchaRout = require('./routes/cancha');
 const localRout = require('./routes/local');
+const playoffsRout = require('./routes/playoffs');
 
 // Routes
 app.use('/partidos', partidosRoute);
@@ -29,6 +30,7 @@ app.use('/liga', ligaRout);
 app.use('/etapaPlayoffs', etapaPlayoffsRout);
 app.use('/cancha', canchaRout);
 app.use('/local', localRout);
+app.use('/playoffs', playoffsRout);
 
 app.get('/', (req, res) => {
     res.send('Welcome');
