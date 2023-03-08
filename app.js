@@ -31,6 +31,7 @@ const alargueRout = require('./routes/alargue');
 const cantidadAlarguesRout = require('./routes/cantidadAlargues');
 const juecesRout = require('./routes/jueces');
 const jugadoresRout = require('./routes/jugadores');
+const fechaRout = require('./routes/fecha');
 
 // Routes
 app.use('/partidos', partidosRoute);
@@ -51,6 +52,7 @@ app.use('/alargue', alargueRout);
 app.use('/cantidadAlargues', cantidadAlarguesRout);
 app.use('/jueces', juecesRout);
 app.use('/jugadores', jugadoresRout);
+app.use('/fecha', fechaRout);
 
 app.get('/', (req, res) => {
     res.send('Welcome');
