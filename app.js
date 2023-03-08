@@ -16,11 +16,13 @@ app.use(bodyParser.json());
 const partidosRoute = require('./routes/partidos');
 const adversarioRoute = require('./routes/adversario');
 const torneoRout = require('./routes/torneo');
+const ligaRout = require('./routes/liga');
 
 // Routes
 app.use('/partidos', partidosRoute);
 app.use('/adversario', adversarioRoute);
 app.use('/torneo', torneoRout);
+app.use('/liga', ligaRout);
 
 app.get('/', (req, res) => {
     res.send('Welcome');
