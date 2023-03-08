@@ -32,6 +32,8 @@ const cantidadAlarguesRout = require('./routes/cantidadAlargues');
 const juecesRout = require('./routes/jueces');
 const jugadoresRout = require('./routes/jugadores');
 const fechaRout = require('./routes/fecha');
+const dtAguadaRout = require('./routes/dtAguada');
+const dtAdversarioRout = require('./routes/dtAdversario');
 
 // Routes
 app.use('/partidos', partidosRoute);
@@ -53,6 +55,8 @@ app.use('/cantidadAlargues', cantidadAlarguesRout);
 app.use('/jueces', juecesRout);
 app.use('/jugadores', jugadoresRout);
 app.use('/fecha', fechaRout);
+app.use('/dtAguada', dtAguadaRout);
+app.use('/dtAdversario', dtAdversarioRout);
 
 app.get('/', (req, res) => {
     res.send('Welcome');
