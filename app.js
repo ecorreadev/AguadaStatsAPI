@@ -28,6 +28,8 @@ const fechaLigaRout = require('./routes/fechaLiga');
 const fechaSuperLigaRout = require('./routes/fechaSuperLiga');
 const partidoPlayoffsRout = require('./routes/partidoPlayoffs');
 const alargueRout = require('./routes/alargue');
+const cantidadAlarguesRout = require('./routes/cantidadAlargues');
+const juecesRout = require('./routes/jueces');
 
 // Routes
 app.use('/partidos', partidosRoute);
@@ -45,6 +47,8 @@ app.use('/fechaLiga', fechaLigaRout);
 app.use('/fechaSuperLiga', fechaSuperLigaRout);
 app.use('/partidoPlayoffs', partidoPlayoffsRout);
 app.use('/alargue', alargueRout);
+app.use('/cantidadAlargues', cantidadAlarguesRout);
+app.use('/jueces', juecesRout);
 
 app.get('/', (req, res) => {
     res.send('Welcome');
