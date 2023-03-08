@@ -23,7 +23,8 @@ const localRout = require('./routes/local');
 const playoffsRout = require('./routes/playoffs');
 const temporadaRegularRout = require('./routes/temporadaRegular');
 const superLigaRout = require('./routes/superLiga');
-const fechaLigaRout = require('./routes/ganado');
+const ganadoRout = require('./routes/ganado');
+const fechaLigaRout = require('./routes/fechaLiga');
 
 // Routes
 app.use('/partidos', partidosRoute);
@@ -36,7 +37,8 @@ app.use('/local', localRout);
 app.use('/playoffs', playoffsRout);
 app.use('/temporadaRegular', temporadaRegularRout);
 app.use('/superLiga', superLigaRout);
-app.use('/ganado', fechaLigaRout);
+app.use('/ganado', ganadoRout);
+app.use('/fechaLiga', fechaLigaRout);
 
 app.get('/', (req, res) => {
     res.send('Welcome');
