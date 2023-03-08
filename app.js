@@ -19,6 +19,7 @@ const torneoRout = require('./routes/torneo');
 const ligaRout = require('./routes/liga');
 const etapaPlayoffsRout = require('./routes/etapaPlayoffs');
 const canchaRout = require('./routes/cancha');
+const localRout = require('./routes/local');
 
 // Routes
 app.use('/partidos', partidosRoute);
@@ -27,6 +28,7 @@ app.use('/torneo', torneoRout);
 app.use('/liga', ligaRout);
 app.use('/etapaPlayoffs', etapaPlayoffsRout);
 app.use('/cancha', canchaRout);
+app.use('/local', localRout);
 
 app.get('/', (req, res) => {
     res.send('Welcome');
