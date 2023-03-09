@@ -35,6 +35,7 @@ const fechaRout = require('./routes/fecha');
 const dtAguadaRout = require('./routes/dtAguada');
 const dtAdversarioRout = require('./routes/dtAdversario');
 const ultimoPartidoRout = require('./routes/ultimoPartido');
+const busquedaRout = require('./routes/busqueda');
 
 // Routes
 app.use('/partidos', partidosRoute);
@@ -59,6 +60,7 @@ app.use('/fecha', fechaRout);
 app.use('/dtAguada', dtAguadaRout);
 app.use('/dtAdversario', dtAdversarioRout);
 app.use('/ultimoPartido', ultimoPartidoRout);
+app.use('/busqueda', busquedaRout);
 
 app.get('/', (req, res) => {
     res.send('Welcome');
